@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="java">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Downloads/CalendarFX-master-11.zip!/CalendarFX-master-11/CalendarFXApp/src/main/java" />
+      <root url="jar://$USER_HOME$/Downloads/CalendarFX-master-11.zip!/CalendarFX-master-11/CalendarFXGoogle/src/main/java" />
+      <root url="jar://$USER_HOME$/Downloads/CalendarFX-master-11.zip!/CalendarFX-master-11/CalendarFXGoogle/src/test/java" />
+      <root url="jar://$USER_HOME$/Downloads/CalendarFX-master-11.zip!/CalendarFX-master-11/CalendarFXResourceApp/src/main/java" />
+      <root url="jar://$USER_HOME$/Downloads/CalendarFX-master-11.zip!/CalendarFX-master-11/CalendarFXSampler/src/main/java" />
+      <root url="jar://$USER_HOME$/Downloads/CalendarFX-master-11.zip!/CalendarFX-master-11/CalendarFXSchedulerApp/src/main/java" />
+      <root url="jar://$USER_HOME$/Downloads/CalendarFX-master-11.zip!/CalendarFX-master-11/CalendarFXView/src/main/java" />
+      <root url="jar://$USER_HOME$/Downloads/CalendarFX-master-11.zip!/CalendarFX-master-11/CalendarFXView/src/test/java" />
+      <root url="jar://$USER_HOME$/Downloads/CalendarFX-master-11.zip!/CalendarFX-master-11/CalendarFXWeather/src/main/java" />
+      <root url="jar://$USER_HOME$/Downloads/CalendarFX-master-11.zip!/CalendarFX-master-11/CalendarFXiCal/src/main/java" />
+    </SOURCES>
+  </library>
+</component>

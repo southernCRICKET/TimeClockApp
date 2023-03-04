@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane fx:id="windowPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="817.0" prefWidth="1033.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.timeclockapp.UIController">
+   <children>
+      <SplitPane dividerPositions="0.592964824120603" layoutX="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="579.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <AnchorPane prefHeight="469.0" prefWidth="960.0">
+               <children>
+                  <TextFlow fx:id="textFlow" layoutX="182.0" prefHeight="56.0" prefWidth="598.0" textAlignment="CENTER" AnchorPane.bottomAnchor="413.0" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Text fx:id="appTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Clock" textAlignment="CENTER">
+                           <font>
+                              <Font name="Unispace-Bold" size="35.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </TextFlow>
+                  <TextFlow layoutX="244.0" layoutY="67.0" prefHeight="36.0" prefWidth="446.0" textAlignment="CENTER" AnchorPane.bottomAnchor="377.0" AnchorPane.leftAnchor="244.0" AnchorPane.rightAnchor="244.0" AnchorPane.topAnchor="67.0">
+                     <children>
+                        <Text fx:id="weekOfText" strokeType="OUTSIDE" strokeWidth="0.0" text="Week of the ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </TextFlow>
+                  <TextFlow layoutX="292.0" layoutY="415.0" prefHeight="16.0" prefWidth="450.0" textAlignment="CENTER" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="292.0" AnchorPane.rightAnchor="289.0" AnchorPane.topAnchor="415.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Hours For Day: " wrappingWidth="133.140625" />
+                        <Text fx:id="dailyHoursText" strokeType="OUTSIDE" strokeWidth="0.0" text="00.00" textAlignment="RIGHT" />
+                     </children>
+                  </TextFlow>
+                  <TextFlow layoutX="292.0" layoutY="438.0" prefHeight="16.0" prefWidth="450.0" textAlignment="CENTER" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="292.0" AnchorPane.rightAnchor="289.0" AnchorPane.topAnchor="438.0">
+                     <children>
+                        <Text fx:id="someText" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Hours For Week: " />
+                        <Text fx:id="weeklyHoursText" strokeType="OUTSIDE" strokeWidth="0.0" text="00.00" textAlignment="RIGHT" wrappingWidth="45.4765625" />
+                     </children>
+                  </TextFlow>
+                  <TableView fx:id="tableView" layoutX="2.0" layoutY="103.0" prefHeight="299.0" prefWidth="1031.0" AnchorPane.bottomAnchor="78.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="103.0">
+                     <columns>
+                        <TableColumn fx:id="typeColumn" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Punch Type" />
+                        <TableColumn fx:id="timeColumn" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Time" />
+                        <TableColumn fx:id="dateColumn" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Date" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="testButton" layoutX="115.0" layoutY="419.0" mnemonicParsing="false" onMouseClicked="#TestButtonHandler" text="Button" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <GridPane alignment="CENTER" prefHeight="278.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="250.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="48.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="250.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Button fx:id="clockInButton" mnemonicParsing="false" onMouseClicked="#ClockHandler" text="Clock In" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="toLunchButton" mnemonicParsing="false" onMouseClicked="#ClockHandler" text="To Lunch" textAlignment="CENTER" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="clockOutButton" mnemonicParsing="false" onMouseClicked="#ClockHandler" text="Clock Out" textAlignment="CENTER" GridPane.columnIndex="2">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="fromLunchButton" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#ClockHandler" text="From Lunch" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="exitButton" mnemonicParsing="false" onMouseClicked="#ExitButtonHandler" text="Exit" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <DatePicker fx:id="datePicker" onHiding="#DatePickerHandler" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
